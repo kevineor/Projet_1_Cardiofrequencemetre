@@ -24,6 +24,6 @@ pinMode(led8, OUTPUT);
 pinMode(led9, OUTPUT);
 pinMode(led0, OUTPUT);
 }
-static int z;
+
 
 #endif // COEUR_H_INCLUDED
