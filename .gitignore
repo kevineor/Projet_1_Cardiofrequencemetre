@@ -1,0 +1,9 @@
+﻿################################################################################
+# Ce fichier .gitignore a été automatiquement créé par Microsoft(R) Visual Studio.
+################################################################################
+
+/TraitementCsv/TraitementCsv.sln
+/TraitementCsv/.vs/TraitementCsv/v15/.suo
+/TraitementCsv/TraitementCsv/TraitementCsv.vcxproj
+/TraitementCsv/TraitementCsv/TraitementCsv.vcxproj.user
+/TraitementCsv/TraitementCsv/TraitementCsv.vcxproj.filters
