@@ -1,14 +1,7 @@
-#define led0
-#define led1
-#define led2
-#define led3
-#define led4
-#define led5
-#define led6
-#define led7
-#define led8
-#define led9
 
+#include "coeur.h"
+#include "coeur.c"
+#include "param.h"
 void setup() {
   // put your setup code here, to run once:
 pinMode(led0, OUTPUT);
@@ -26,6 +19,24 @@ pinMode(led0, OUTPUT);
 }
 
 void loop() {
+  switch(z);
+ case 1:
+ {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   // put your main code here, to run repeatedly:
 digitalWrite(led1, HIGH);
 delay(200);
