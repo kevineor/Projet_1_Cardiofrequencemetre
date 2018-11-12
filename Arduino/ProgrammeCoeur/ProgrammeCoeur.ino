@@ -129,15 +129,42 @@ digitalWrite(led0,LOW);
 delay(100);
 break;
 
+case 7:
+//Le mode chenille
+digitalWrite(led0,HIGH);
+digitalWrite(led9,LOW);
+ delay(200); //On mettra la fréquence cardiaque
+ digitalWrite(led1,HIGH);
+ digitalWrite(led0,LOW);
+ delay(200);
+ digitalWrite(led2,HIGH);
+ digitalWrite(led1,LOW);
+ delay(200);
+ digitalWrite(led3,HIGH);
+ digitalWrite(led2,LOW);
+ delay(200);
+ digitalWrite(led4,HIGH);
+ digitalWrite(led3,LOW);
+  delay(200);
+ digitalWrite(led4,HIGH);
+ digitalWrite(led3,LOW);
+  delay(200);
+ digitalWrite(led5,HIGH);
+ digitalWrite(led4,LOW);
+  delay(200);
+ digitalWrite(led6,HIGH);
+ digitalWrite(led5,LOW);
+  delay(200);
+ digitalWrite(led7,HIGH);
+ digitalWrite(led6,LOW);
+  delay(200);
+ digitalWrite(led8,HIGH);
+ digitalWrite(led7,LOW);
+  delay(200);
+ digitalWrite(led9,HIGH);
+ digitalWrite(led8,LOW);
+  delay(200);
+
+break;
   }
-
-
-
-
-
-
-
-
-
-
 }
