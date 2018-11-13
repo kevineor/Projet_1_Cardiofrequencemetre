@@ -29,21 +29,27 @@ void TwoLed(int i,int led[10])
  {
   digitalWrite(led[t],HIGH);
  }
- 
- delay(i); //On mettra la fréquence cardiaque
-
- for(int t=0;t<10;t+=2)
+ delay(i);
+  for(int t=0;t<10;t+=2)
  {
   digitalWrite(led[t],LOW);
  }
-  delay(100);
+ for(int t=1;t<10;t+=2)
+ {
+  digitalWrite(led[t],HIGH);
+ }
+ delay(i);
+ for(int t=1;t<10;t+=2)
+ {
+  digitalWrite(led[t],LOW);
+ }
 }
+ 
 void ThreeLed(int i,int led[10])
 {  for(int t=0;t<10;t+=3)
  {
   digitalWrite(led[t],HIGH);
- }
- 
+ } 
  delay(i); //On mettra la fréquence cardiaque
 
  for(int t=0;t<10;t+=3)
@@ -51,6 +57,7 @@ void ThreeLed(int i,int led[10])
   digitalWrite(led[t],LOW);
  }
   delay(100);
+
 }
 void FourLed(int i,int led[10])
 {
