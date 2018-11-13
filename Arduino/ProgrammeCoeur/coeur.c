@@ -44,7 +44,6 @@ void TwoLed(int i,int led[10])
   digitalWrite(led[t],LOW);
  }
 }
- 
 void ThreeLed(int i,int led[10])
 { for(int t=0;t<10;t+=3)
  {
@@ -73,8 +72,6 @@ void ThreeLed(int i,int led[10])
  {
   digitalWrite(led[t],LOW);
  }  //On mettra la fréquence cardiaque
-
-
 }
 void FourLed(int i,int led[10])
 {
@@ -191,7 +188,6 @@ delay(i);
 }
 void Chenille(int i,int led[10])
 {
-
   digitalWrite(led[1],HIGH);
   delay(i);
  for(int t=1;t<10;t++)
@@ -204,5 +200,4 @@ void Chenille(int i,int led[10])
    digitalWrite(led[0],HIGH);
    delay(i);
    digitalWrite(led[9], LOW);
-  
 }
