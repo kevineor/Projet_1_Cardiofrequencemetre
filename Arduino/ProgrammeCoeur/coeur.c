@@ -191,37 +191,18 @@ delay(i);
 }
 void Chenille(int i,int led[10])
 {
-  digitalWrite(led[0],HIGH);
-digitalWrite(led[9],LOW);
- delay(i); //On mettra la fréquence cardiaque
- digitalWrite(led[1],HIGH);
- digitalWrite(led[0],LOW);
- delay(i);
- digitalWrite(led[2],HIGH);
- digitalWrite(led[1],LOW);
- delay(i);
- digitalWrite(led[3],HIGH);
- digitalWrite(led[2],LOW);
- delay(i);
- digitalWrite(led[4],HIGH);
- digitalWrite(led[3],LOW);
+
+  digitalWrite(led[1],HIGH);
   delay(i);
- digitalWrite(led[4],HIGH);
- digitalWrite(led[3],LOW);
-  delay(i);
- digitalWrite(led[5],HIGH);
- digitalWrite(led[4],LOW);
-  delay(i);
- digitalWrite(led[6],HIGH);
- digitalWrite(led[5],LOW);
-  delay(i);
- digitalWrite(led[7],HIGH);
- digitalWrite(led[6],LOW);
-  delay(i);
- digitalWrite(led[8],HIGH);
- digitalWrite(led[7],LOW);
-  delay(i);
- digitalWrite(led[9],HIGH);
- digitalWrite(led[8],LOW);
-  delay(i);
+ for(int t=1;t<10;t++)
+   {
+    digitalWrite(led[t-1],LOW);
+    digitalWrite(led[t],HIGH);
+    digitalWrite(led[t+1],HIGH);
+    delay(i);
+   }
+   digitalWrite(led[0],HIGH);
+   delay(i);
+   digitalWrite(led[9], LOW);
+  
 }
