@@ -1,144 +1,128 @@
 #include "coeur.h"
 #include <arduino.h>
-
-void AllLed(int i)
+void InitialisationLed(int* led)
 {
- digitalWrite(led0,HIGH);
- digitalWrite(led1,HIGH);
- digitalWrite(led2,HIGH);
- digitalWrite(led3,HIGH);
- digitalWrite(led4,HIGH);
- digitalWrite(led5,HIGH);
- digitalWrite(led6,HIGH);
- digitalWrite(led7,HIGH);
- digitalWrite(led8,HIGH);
- digitalWrite(led9,HIGH);
+  int pin = 2;
+  for(int i = 0; i < 10; i++)
+  {
+    led[i] = pin;
+    pinMode(led[i], OUTPUT);
+    pin++;
+  }
+}
+void AllLed(int i,int led[10])
+{
+ for(int t=0;t<10;t++)
+ {
+  digitalWrite(led[t],HIGH);
+ }
  delay(i); //On mettra la fréquence cardiaque
-  digitalWrite(led0,LOW);
-  digitalWrite(led1,LOW);
-  digitalWrite(led2,LOW);
-  digitalWrite(led3,LOW);
-  digitalWrite(led4,LOW);
-  digitalWrite(led5,LOW);
-  digitalWrite(led6,LOW);
-  digitalWrite(led7,LOW);
-  digitalWrite(led8,LOW);
-  digitalWrite(led9,LOW);
+  for(int t=0;t<10;t++)
+  {
+  digitalWrite(led[t],LOW);
+  }
   delay(100);
 }
-void TwoLed(int i)
+void TwoLed(int i,int led[10])
 {
- digitalWrite(led1,HIGH);
-
- digitalWrite(led3,HIGH);
-
- digitalWrite(led5,HIGH);
-
- digitalWrite(led7,HIGH);
-
- digitalWrite(led9,HIGH);
+ for(int t=0;t<10;t+=2)
+ {
+  digitalWrite(led[t],HIGH);
+ }
  
  delay(i); //On mettra la fréquence cardiaque
 
-  digitalWrite(led1,LOW);
-
-  digitalWrite(led3,LOW);
-
-  digitalWrite(led5,LOW);
-
-  digitalWrite(led7,LOW);
-
-  digitalWrite(led9,LOW);
+ for(int t=0;t<10;t+=2)
+ {
+  digitalWrite(led[t],LOW);
+ }
   delay(100);
 }
-void ThreeLed(int i)
-{ digitalWrite(led0,HIGH);
-
- digitalWrite(led3,HIGH);
-
- digitalWrite(led6,HIGH);
-
- digitalWrite(led9,HIGH);
+void ThreeLed(int i,int led[10])
+{  for(int t=0;t<10;t+=3)
+ {
+  digitalWrite(led[t],HIGH);
+ }
+ 
  delay(i); //On mettra la fréquence cardiaque
-  digitalWrite(led0,LOW);
 
-  digitalWrite(led3,LOW);
-
-  digitalWrite(led6,LOW);
-
-  digitalWrite(led9,LOW);
+ for(int t=0;t<10;t+=3)
+ {
+  digitalWrite(led[t],LOW);
+ }
   delay(100);
 }
-void FourLed(int i)
+void FourLed(int i,int led[10])
 {
-   digitalWrite(led0,HIGH);
-
- digitalWrite(led4,HIGH);
-
- digitalWrite(led8,HIGH);
-
+  for(int t=0;t<10;t+=4)
+ {
+  digitalWrite(led[t],HIGH);
+ }
+ 
  delay(i); //On mettra la fréquence cardiaque
-  digitalWrite(led0,LOW);
 
-  digitalWrite(led4,LOW);
-
-  digitalWrite(led8,LOW);
-
+ for(int t=0;t<10;t+=4)
+ {
+  digitalWrite(led[t],LOW);
+ }
+  delay(100);
   delay(100);
 }
-void FiveLed(int i)
+void FiveLed(int i,int led[10])
 {
-  digitalWrite(led0,HIGH);
-
- digitalWrite(led5,HIGH);
-
+  for(int t=0;t<10;t+=5)
+ {
+  digitalWrite(led[t],HIGH);
+ }
+ 
  delay(i); //On mettra la fréquence cardiaque
-  digitalWrite(led0,LOW);
 
-  digitalWrite(led5,LOW);
-
+ for(int t=0;t<10;t+=5)
+ {
+  digitalWrite(led[t],LOW);
+ }
   delay(100);
 }
-void OnlyLed(int i)
+void OnlyLed(int i,int led[10],int sel)
 {
-digitalWrite(led0,HIGH); //Essayer de remplacer "0" par une valeur utilisateur
+digitalWrite(led[sel],HIGH); //Essayer de remplacer "0" par une valeur utilisateur
 delay(200);//On mettra la fréquence cardiaque
-digitalWrite(led0,LOW);
+digitalWrite(led[sel],LOW);
 delay(100);
 }
-void Chenille(int i)
+void Chenille(int i,int led[10])
 {
-  digitalWrite(led0,HIGH);
-digitalWrite(led9,LOW);
+  digitalWrite(led[0],HIGH);
+digitalWrite(led[9],LOW);
  delay(i); //On mettra la fréquence cardiaque
- digitalWrite(led1,HIGH);
- digitalWrite(led0,LOW);
+ digitalWrite(led[1],HIGH);
+ digitalWrite(led[0],LOW);
  delay(i);
- digitalWrite(led2,HIGH);
- digitalWrite(led1,LOW);
+ digitalWrite(led[2],HIGH);
+ digitalWrite(led[1],LOW);
  delay(i);
- digitalWrite(led3,HIGH);
- digitalWrite(led2,LOW);
+ digitalWrite(led[3],HIGH);
+ digitalWrite(led[2],LOW);
  delay(i);
- digitalWrite(led4,HIGH);
- digitalWrite(led3,LOW);
+ digitalWrite(led[4],HIGH);
+ digitalWrite(led[3],LOW);
   delay(i);
- digitalWrite(led4,HIGH);
- digitalWrite(led3,LOW);
+ digitalWrite(led[4],HIGH);
+ digitalWrite(led[3],LOW);
   delay(i);
- digitalWrite(led5,HIGH);
- digitalWrite(led4,LOW);
+ digitalWrite(led[5],HIGH);
+ digitalWrite(led[4],LOW);
   delay(i);
- digitalWrite(led6,HIGH);
- digitalWrite(led5,LOW);
+ digitalWrite(led[6],HIGH);
+ digitalWrite(led[5],LOW);
   delay(i);
- digitalWrite(led7,HIGH);
- digitalWrite(led6,LOW);
+ digitalWrite(led[7],HIGH);
+ digitalWrite(led[6],LOW);
   delay(i);
- digitalWrite(led8,HIGH);
- digitalWrite(led7,LOW);
+ digitalWrite(led[8],HIGH);
+ digitalWrite(led[7],LOW);
   delay(i);
- digitalWrite(led9,HIGH);
- digitalWrite(led8,LOW);
+ digitalWrite(led[9],HIGH);
+ digitalWrite(led[8],LOW);
   delay(i);
 }
