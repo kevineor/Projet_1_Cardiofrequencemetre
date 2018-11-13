@@ -132,7 +132,7 @@ void FourLed(int i,int led[10])
   for(int t=5;t<10;t+=4)
  {
   digitalWrite(led[t],LOW);
- }7
+ }
 }
 void FiveLed(int i,int led[10])
 {
