@@ -46,34 +46,74 @@ void TwoLed(int i,int led[10])
 }
  
 void ThreeLed(int i,int led[10])
-{  for(int t=0;t<10;t+=3)
+{ for(int t=0;t<10;t+=3)
  {
   digitalWrite(led[t],HIGH);
- } 
- delay(i); //On mettra la fréquence cardiaque
-
- for(int t=0;t<10;t+=3)
+ }
+ delay(i);
+  for(int t=0;t<10;t+=3)
  {
   digitalWrite(led[t],LOW);
  }
-  delay(100);
+ for(int t=1;t<10;t+=3)
+ {
+  digitalWrite(led[t],HIGH);
+ }
+ delay(i);
+ for(int t=1;t<10;t+=3)
+ {
+  digitalWrite(led[t],LOW);
+ } 
+  for(int t=2;t<10;t+=3)
+ {
+  digitalWrite(led[t],HIGH);
+ }
+ delay(i);
+ for(int t=2;t<10;t+=3)
+ {
+  digitalWrite(led[t],LOW);
+ }  //On mettra la fréquence cardiaque
+
 
 }
 void FourLed(int i,int led[10])
 {
-  for(int t=0;t<10;t+=4)
+ for(int t=0;t<10;t+=4)
  {
   digitalWrite(led[t],HIGH);
  }
- 
- delay(i); //On mettra la fréquence cardiaque
-
- for(int t=0;t<10;t+=4)
+ delay(i);
+  for(int t=0;t<10;t+=4)
  {
   digitalWrite(led[t],LOW);
  }
-  delay(100);
-  delay(100);
+ for(int t=1;t<10;t+=4)
+ {
+  digitalWrite(led[t],HIGH);
+ }
+ delay(i);
+ for(int t=1;t<10;t+=4)
+ {
+  digitalWrite(led[t],LOW);
+ } 
+  for(int t=2;t<10;t+=4)
+ {
+  digitalWrite(led[t],HIGH);
+ }
+ delay(i);
+ for(int t=2;t<10;t+=4)
+ {
+  digitalWrite(led[t],LOW);
+ } 
+  for(int t=3;t<10;t+=4)
+ {
+  digitalWrite(led[t],HIGH);
+ }
+ delay(i);
+ for(int t=3;t<10;t+=4)
+ {
+  digitalWrite(led[t],LOW);
+ } 
 }
 void FiveLed(int i,int led[10])
 {
@@ -81,14 +121,47 @@ void FiveLed(int i,int led[10])
  {
   digitalWrite(led[t],HIGH);
  }
- 
- delay(i); //On mettra la fréquence cardiaque
-
- for(int t=0;t<10;t+=5)
+ delay(i);
+  for(int t=0;t<10;t+=5)
  {
   digitalWrite(led[t],LOW);
  }
-  delay(100);
+ for(int t=1;t<10;t+=5)
+ {
+  digitalWrite(led[t],HIGH);
+ }
+ delay(i);
+ for(int t=1;t<10;t+=5)
+ {
+  digitalWrite(led[t],LOW);
+ } 
+  for(int t=2;t<10;t+=5)
+ {
+  digitalWrite(led[t],HIGH);
+ }
+ delay(i);
+ for(int t=2;t<10;t+=5)
+ {
+  digitalWrite(led[t],LOW);
+ } 
+  for(int t=3;t<10;t+=5)
+ {
+  digitalWrite(led[t],HIGH);
+ }
+ delay(i);
+ for(int t=3;t<10;t+=5)
+ {
+  digitalWrite(led[t],LOW);
+ } 
+ for(int t=4;t<10;t+=5)
+ {
+  digitalWrite(led[t],HIGH);
+ }
+ delay(i);
+  for(int t=4;t<10;t+=5)
+ {
+  digitalWrite(led[t],LOW);
+ }
 }
 void OnlyLed(int i,int led[10],int sel)
 {
