@@ -6,9 +6,9 @@ void setup()
 {
 InitialisationLed(led);
 }
-
 void loop() {
-  int i=200;
+  int i=70; //i ici est le BPM
+  i=(i/60)*1000; //Ici on aura i en ms.
   switch(z)
   {
  case 1:
