@@ -114,6 +114,25 @@ void FourLed(int i,int led[10])
  {
   digitalWrite(led[t],LOW);
  } 
+  for(int t=4;t<10;t+=4)
+ {
+  digitalWrite(led[t],HIGH);
+ } 
+  delay(i);
+  for(int t=4;t<10;t+=4)
+ {
+  digitalWrite(led[t],LOW);
+ }
+
+  for(int t=5;t<10;t+=4)
+ {
+  digitalWrite(led[t],HIGH);
+ } 
+  delay(i);
+  for(int t=5;t<10;t+=4)
+ {
+  digitalWrite(led[t],LOW);
+ }7
 }
 void FiveLed(int i,int led[10])
 {
@@ -166,9 +185,9 @@ void FiveLed(int i,int led[10])
 void OnlyLed(int i,int led[10],int sel)
 {
 digitalWrite(led[sel],HIGH); //Essayer de remplacer "0" par une valeur utilisateur
-delay(200);//On mettra la fréquence cardiaque
+delay(i);//On mettra la fréquence cardiaque
 digitalWrite(led[sel],LOW);
-delay(100);
+delay(i);
 }
 void Chenille(int i,int led[10])
 {
