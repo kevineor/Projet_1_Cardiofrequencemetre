@@ -4,6 +4,7 @@
 
 int main()
 {
+    int z;
     int menu=0;
     printf("Bonjour! Merci de saisir votre choix : ");
     while(menu==0)
@@ -19,12 +20,15 @@ int main()
         {
         case 1:
             //Si cas 1, on ecrit dans le header "param.h" la valeur z=1
-            fon();
+            z=1;
+            fon(z);
             printf("Succes. Retour au menu");
             menu=0;
             break;
         case 2:
             //Meme logique que le cas precedent...
+            z=2;
+            fon(z);
             printf("Succes. Retour au menu");
             menu=0;
             break;

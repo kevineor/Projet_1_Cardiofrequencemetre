@@ -4,5 +4,5 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void fon(void);
+void fon(int);
 #endif // GENERATIONCODE_H_INCLUDED
