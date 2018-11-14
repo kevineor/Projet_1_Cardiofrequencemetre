@@ -1,6 +1,0 @@
-#ifndef MENU_C_INCLUDED
-#define MENU_C_INCLUDED
-
-
-
-#endif // MENU_C_INCLUDED

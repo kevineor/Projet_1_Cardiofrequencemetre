@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1542189188 source:c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcodemenu2\generationcode\main.c
+	<stdio.h>
+	<stdlib.h>
+	"GenerationCode.h"
+
+1542189040 c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcodemenu2\generationcode\generationcode.h
+	<stdio.h>
+	<stdlib.h>
+
+1542188808 c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcodemenu2\generationcode\generationcode.c
+	<stdio.h>
+	<stdlib.h>
+
+1542189153 source:c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcodemenu2\generationcode\generationcode.c
+	"GenerationCode.h"
+
+1542188622 source:c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcodemenu2\generationcode\menu.c
+
