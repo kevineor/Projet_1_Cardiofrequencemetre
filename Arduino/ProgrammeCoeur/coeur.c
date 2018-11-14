@@ -184,7 +184,7 @@ void OnlyLed(int i,int led[10],int sel)
 digitalWrite(led[sel],HIGH); //Essayer de remplacer "0" par une valeur utilisateur
 delay(i);//On mettra la fréquence cardiaque
 digitalWrite(led[sel],LOW);
-delay(i);
+delay(100);
 }
 void Chenille(int i,int led[10])
 {

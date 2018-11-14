@@ -1,7 +1,6 @@
 #include "coeur.h"
 #include "coeur.c"
 #include "param.h"
-int led[10];
 void setup() 
 {
 InitialisationLed(led);

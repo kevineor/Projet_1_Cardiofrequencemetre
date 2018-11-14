@@ -1,5 +1,6 @@
 #ifndef COEUR_H_INCLUDED
 #define COEUR_H_INCLUDED
+int led[10];
 void InitialisationLed(int*);
 void AllLed(int,int*);
 void TwoLed(int,int*);
