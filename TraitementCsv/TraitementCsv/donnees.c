@@ -5,20 +5,24 @@
 
 
 //Cette fonction renvoie l'adresse du premier element de la liste
-Donnee* ajouterDonnee(Donnee *liste, Donnee donnee)
+ListeChainee* ajouterDonnee(ListeChainee *liste, Donnee donnee)
 {
-	Donnee* ltemp = liste;
+
+	ListeChainee* ltemp = liste;
 
 	//Nous créons une nouvelle variable allouée manuellement pour éviter l'utilisation d'une variable locale, gérée par l'OS
 	Donnee *ajout = malloc(sizeof(Donnee));
 	ajout->date = donnee.date;
 	ajout->pouls = donnee.pouls;
-	ajout->suivant = NULL;
+	ListeChainee* prochain = malloc(sizeof(ListeChainee));
+	prochain->donnee = ajout;
+	prochain->suivant = NULL;
+
 
 	//On vérifie l'etat de la liste
 	if (liste == NULL)
 	{
-		liste = ajout;
+		liste = prochain;
 		return liste; //On return l'adresse de la liste (si jamais la liste était vide)
 	}
 	else
@@ -28,26 +32,28 @@ Donnee* ajouterDonnee(Donnee *liste, Donnee donnee)
 		{
 			liste = liste->suivant;
 		}
-		liste->suivant = ajout;
+		liste->suivant = prochain;
 
 		return ltemp; //Nous renvoyons l'adresse de la premiere structure de la liste
 	}
 }
 
-Donnee* lireCsv(char* chemin)
+Donnee* lireCsv(char* chemin, int *taille)
 {
 	FILE* fichier = fopen(chemin, "r");
-
-	Donnee *liste = NULL;
+	*taille = 0;
+	ListeChainee *liste = NULL;
 	if (fichier != NULL)
 	{
 		Donnee donneeAjout;
 		while (fscanf(fichier, "%d%*c%d", &donneeAjout.date, &donneeAjout.pouls) > 0)
 		{
+			(*taille)++;
 			liste = ajouterDonnee(liste, donneeAjout);
 		}
 		fclose(fichier);
-		return liste;
+		affierListeChaineeDonnees(liste);
+		return convertirEnTableau(liste);
 	}
 	else
 	{
@@ -62,25 +68,64 @@ void afficherDonnee(Donnee donnee)
 
 }
 
-void afficherListeDonnees(Donnee *liste)
+void affierListeChaineeDonnees(ListeChainee* liste)
 {
 	while (liste != NULL)
 	{
-		afficherDonnee(*liste);
+		afficherDonnee(*(liste->donnee));
 		liste = liste->suivant;
 	}
 }
 
-//Nous utilisons une valeur de renvoi pour pouvoir reinitialiser le pointeur de liste sur NULL
-Donnee* supprimerListe(Donnee* liste)
+void afficherListeDonnees(Donnee *liste, int taille)
 {
-	Donnee *prochain;
+	int i;
+	for (i = 0; i < taille; i++)
+	{
+		afficherDonnee(liste[i]);
+	}
+}
+
+
+void supprimerListeChainee(ListeChainee* liste)
+{
+	ListeChainee *prochain;
 	while (liste != NULL)
 	{
 		prochain = liste->suivant;
+		free(liste->donnee);
 		free(liste);
 		liste = prochain;
 	}
 	return NULL;
+}
+
+Donnee* convertirEnTableau(ListeChainee* listeChainee)
+{
+	Donnee *tableau;
+	int tailleListe = 0;
+	ListeChainee* temp = listeChainee;
+	while (listeChainee != NULL)
+	{
+		listeChainee = listeChainee->suivant;
+		tailleListe++;
+	} 
+	listeChainee = temp;
+	tableau = malloc(tailleListe * sizeof(Donnee));
+	int i;
+	for (i = 0; i < tailleListe; i++)
+	{
+		//On check une erreur
+		if (listeChainee == NULL)
+		{
+			fprintf(stderr, "ERREUR : Utilisation de liste chainnee a NULL");
+		}
+		//on ajoute la donnée au tableau
+		tableau[i].date = listeChainee->donnee->date;
+		tableau[i].pouls = listeChainee->donnee->pouls;
+		listeChainee = listeChainee->suivant;
+	}
+	supprimerListeChainee(listeChainee);
+	return tableau;
 }
 

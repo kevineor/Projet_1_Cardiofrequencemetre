@@ -6,16 +6,25 @@ typedef struct Donnee
 {
 	int date;
 	int pouls;
-	struct Donnee *suivant;
 }Donnee;
 
-Donnee* ajouterDonnee(Donnee * liste, Donnee donnee);
+typedef struct Lchaine
+{
+	Donnee* donnee;
+	struct Lchaine *suivant;
+}ListeChainee;
 
-Donnee* lireCsv(char * chemin);
+ListeChainee* ajouterDonnee(ListeChainee* liste, Donnee donnee);
+
+Donnee* lireCsv(char * chemin, int *taille);
 
 void afficherDonnee(Donnee donnee);
 
-void afficherListeDonnees(Donnee * liste);
+static void affierListeChaineeDonnees(ListeChainee * liste);
 
-Donnee*	supprimerListe(Donnee * liste);
+void afficherListeDonnees(Donnee * liste, int taille);
+
+void supprimerListeChainee(ListeChainee * liste);
+
+static Donnee * convertirEnTableau(ListeChainee * listeChainee);
 
