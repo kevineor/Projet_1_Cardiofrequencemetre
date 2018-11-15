@@ -52,7 +52,6 @@ Donnee* lireCsv(char* chemin, int *taille)
 			liste = ajouterDonnee(liste, donneeAjout);
 		}
 		fclose(fichier);
-		affierListeChaineeDonnees(liste);
 		return convertirEnTableau(liste);
 	}
 	else
@@ -97,7 +96,6 @@ void supprimerListeChainee(ListeChainee* liste)
 		free(liste);
 		liste = prochain;
 	}
-	return NULL;
 }
 
 Donnee* convertirEnTableau(ListeChainee* listeChainee)
