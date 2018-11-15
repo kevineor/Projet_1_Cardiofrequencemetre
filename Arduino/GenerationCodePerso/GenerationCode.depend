@@ -1,0 +1,68 @@
+# depslib dependency file v1.0
+1542189188 source:c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcodemenu2\generationcode\main.c
+	<stdio.h>
+	<stdlib.h>
+	"GenerationCode.h"
+
+1542189040 c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcodemenu2\generationcode\generationcode.h
+	<stdio.h>
+	<stdlib.h>
+
+1542188808 c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcodemenu2\generationcode\generationcode.c
+	<stdio.h>
+	<stdlib.h>
+
+1542189153 source:c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcodemenu2\generationcode\generationcode.c
+	"GenerationCode.h"
+
+1542188622 source:c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcodemenu2\generationcode\menu.c
+
+1542191806 source:c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcodemenu\generationcode\generationcode.c
+	<stdio.h>
+	<stdlib.h>
+	"GenerationCode.h"
+
+1542190762 c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcodemenu\generationcode\generationcode.h
+	<stdio.h>
+	<stdlib.h>
+
+1542190795 source:c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcodemenu\generationcode\main.c
+	<stdio.h>
+	<stdlib.h>
+	"GenerationCode.h"
+
+1542188622 source:c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcodemenu\generationcode\menu.c
+
+1542188622 source:c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\programmecoeur\menu.c
+
+1542190795 source:c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\programmecoeur\main.c
+	<stdio.h>
+	<stdlib.h>
+	"GenerationCode.h"
+
+1542190762 c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\programmecoeur\generationcode.h
+	<stdio.h>
+	<stdlib.h>
+
+1542190978 source:c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\programmecoeur\generationcode.c
+	"GenerationCode.h"
+
+1542269946 source:c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcode\generationcode.c
+	<stdio.h>
+	<stdlib.h>
+	"GenerationCode.h"
+
+1542269946 c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcode\generationcode.h
+
+1542279869 source:c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcode\main.c
+	<stdio.h>
+	<stdlib.h>
+	"GenerationCode.h"
+
+1542279869 source:c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcode\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1542280163 c:\users\vzonz\documents\github\projet_1_cardiofrequencemetre\arduino\generationcode\menu.h
+

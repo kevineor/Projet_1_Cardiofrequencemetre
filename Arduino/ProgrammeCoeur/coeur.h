@@ -7,8 +7,13 @@ void TwoLed(int,int*);
 void ThreeLed(int,int*);
 void FourLed(int,int*);
 void FiveLed(int,int*);
+void SixLed(int,int*);
+void SevenLed(int,int*);
+void EightLed(int,int*);
+void NineLed(int,int*);
 void OnlyLed(int,int*,int);
 void Chenille(int,int*);
+void ChenilleB(int,int*);
 
 
 #endif // COEUR_H_INCLUDED
