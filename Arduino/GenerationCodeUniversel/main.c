@@ -4,7 +4,7 @@
 
 int main()
 {
-    int z;
+    int z,Pouls;
     int sel=0;
     int menu=0;
     printf("Bonjour!\n");

@@ -446,3 +446,18 @@ void ChenilleB(int i,int*led)
     digitalWrite(led[0],LOW);
     delay(i);
 }
+void Simulateur(int Pouls)
+{
+  float z=0;
+  z=(60.0/(float)Pouls)*1000.0;
+  for(int t=0;t<10;t++)
+  {
+    digitalWrite(led[t],HIGH);
+  }
+  delay(30);
+  for(int t=0;t<10;t++)
+  {
+    digitalWrite(led[t],LOW);
+  }
+  delay((int)z);
+}

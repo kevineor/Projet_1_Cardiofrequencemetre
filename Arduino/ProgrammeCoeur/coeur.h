@@ -14,6 +14,6 @@ void NineLed(int,int*);
 void OnlyLed(int,int*,int);
 void Chenille(int,int*);
 void ChenilleB(int,int*);
-
+void Simulateur(int);
 
 #endif // COEUR_H_INCLUDED

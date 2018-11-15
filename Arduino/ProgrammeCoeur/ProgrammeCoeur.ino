@@ -71,5 +71,9 @@ case 12:
 //Le mode chenille par battement
 ChenilleB(i,led);
 break;
+
+case 13:
+//Le monde simulateur
+Simulateur(Pouls);
   }
 }
