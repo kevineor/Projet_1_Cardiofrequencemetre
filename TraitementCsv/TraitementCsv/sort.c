@@ -54,3 +54,26 @@ void sort(int n, struct Donnee *a, int (cmp)(Donnee *, Donnee *)) {
 		}
 	}
 }
+
+Donnee* reverseList(Donnee *liste, int taille)
+{
+	
+	Donnee *reversed = malloc(taille * sizeof(Donnee));
+	Donnee temp;
+	int i;
+	int fin = taille - 1;
+	for (i = 0; i < taille / 2; i++)
+	{
+		temp = liste[i];
+		liste[i] = liste[fin];
+		liste[fin] = temp;
+		fin--;
+	}
+	return reversed;
+}
+
+void sort_reverse(int n, struct Donnee *a, int (cmp)(Donnee *, Donnee *))
+{
+	sort(n, a, cmp);
+	reverseList(a, n);
+}

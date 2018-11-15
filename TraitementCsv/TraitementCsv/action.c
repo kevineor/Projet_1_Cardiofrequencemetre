@@ -19,3 +19,4 @@ int compare_by_pouls(Donnee *a, Donnee *b)
 		- a->pouls > b->pouls : 1
 	*/
 }
+
