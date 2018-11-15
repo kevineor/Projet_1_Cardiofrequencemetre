@@ -14,56 +14,74 @@ int Menu(int menu,int sel,int z)
             //Si cas 1, on ecrit dans le header "param.h" la valeur z=1
             z=1;
             Generation(z,sel);
-            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu: \n");
+            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu... \n");
+            system("pause");
+            system("cls");
             Menu(menu,sel,z);
             break;
         case 2:
             //Meme logique que le cas precedent...
             z=2;
             Generation(z,sel);
-            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu: \n");
+            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu... \n");
+            system("pause");
+            system("cls");
             Menu(menu,sel,z);
             break;
         case 3:
             z=3;
             Generation(z,sel);
-            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu: \n");
+            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu... \n");
+            system("pause");
+            system("cls");
             Menu(menu,sel,z);
             break;
         case 4:
             z=4;
             Generation(z,sel);
-            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu: \n");
+            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu... \n");
+            system("pause");
+            system("cls");
             Menu(menu,sel,z);
             break;
         case 5:
             z=5;
             Generation(z,sel);
-            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu: \n");
+            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu... \n");
+            system("pause");
+            system("cls");
             Menu(menu,sel,z);
             break;
         case 6:
             z=6;
             Generation(z,sel);
-            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu: \n");
+            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu... \n");
+            system("pause");
+            system("cls");
             Menu(menu,sel,z);
             break;
         case 7:
             z=7;
             Generation(z,sel);
-            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu: \n");
+            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu... \n");
+            system("pause");
+            system("cls");
             Menu(menu,sel,z);
             break;
         case 8:
             z=8;
             Generation(z,sel);
-            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu: \n");
+            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu... \n");
+            system("pause");
+            system("cls");
             Menu(menu,sel,z);
             break;
         case 9:
             z=9;
             Generation(z,sel);
-            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu: \n");
+            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu... \n");
+            system("pause");
+            system("cls");
             Menu(menu,sel,z);
             break;
         case 10:
@@ -71,19 +89,25 @@ int Menu(int menu,int sel,int z)
             printf("Saisir la LED a allumer : ");
             scanf("%d",&sel);
             Generation(z,sel);
-            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu: \n");
+            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu... \n");
+            system("pause");
+            system("cls");
             Menu(menu,sel,z);
             break;
         case 11:
             z=11;
             Generation(z,sel);
-            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu: \n");
+            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu... \n");
+            system("pause");
+            system("cls");
             Menu(menu,sel,z);
             break;
         case 12:
             z=12;
             Generation(z,sel);
-            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu: \n");
+            printf("Succes. Merci de televerser le programme vers l'Arduino afin de profiter de cette option. Retour au menu... \n");
+            system("pause");
+            system("cls");
             Menu(menu,sel,z);
             break;
         case 13:
@@ -91,7 +115,9 @@ int Menu(int menu,int sel,int z)
             return 0;
             break;
         default:
-            printf("Erreur, merci de reessayer");
+            printf("Erreur, merci de reessayer avec une option valide. Retour au menu");
+            system("pause");
+            system("cls");
             Menu(menu,sel,z);
             break;
 
