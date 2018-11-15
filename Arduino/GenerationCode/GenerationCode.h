@@ -1,8 +1,5 @@
 #ifndef GENERATIONCODE_H_INCLUDED
 #define GENERATIONCODE_H_INCLUDED
 
-#include <stdio.h>
-#include <stdlib.h>
-
-void fon(int,int);
+void Generation(int,int);
 #endif // GENERATIONCODE_H_INCLUDED
