@@ -26,3 +26,5 @@ void supprimerListeChainee(ListeChainee * liste);
 
 static Donnee * convertirEnTableau(ListeChainee * listeChainee);
 
+Donnee * copierTableau(Donnee * tab, int taille);
+

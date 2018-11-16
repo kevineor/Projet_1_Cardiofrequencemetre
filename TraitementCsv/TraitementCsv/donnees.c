@@ -127,3 +127,13 @@ Donnee* convertirEnTableau(ListeChainee* listeChainee)
 	return tableau;
 }
 
+Donnee* copierTableau(Donnee *tab, int taille)
+{
+	Donnee *copie = malloc(taille * sizeof(Donnee));
+	int i;
+	for (i = 0; i < taille; i++)
+	{
+		copie[i] = tab[i];
+	}
+	return copie;
+}

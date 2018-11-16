@@ -47,7 +47,6 @@ double moyenneIntervalle(Donnee *liste, int taille, int tempsA, int tempsB)
 	{
 		if (liste[i].date <= max(tempsA, tempsB) && liste[i].date >= min(tempsA, tempsB))
 		{
-			fprintf(stdout, "test %d", liste[i].pouls);
 			moyenne = moyenne + (double) liste[i].pouls;
 			nombre = nombre + 1.0;
 		}
@@ -55,3 +54,32 @@ double moyenneIntervalle(Donnee *liste, int taille, int tempsA, int tempsB)
 	return (moyenne / nombre);
 }
 
+Donnee minPouls(Donnee* liste, int taille)
+{
+	Donnee minActuel;
+	minActuel.pouls = liste[0].pouls;
+	int i;
+	for (i = 0; i < taille; i++)
+	{
+		if (minActuel.pouls > liste[i].pouls)
+		{
+			minActuel = liste[i];
+		}
+	}
+	return minActuel;
+}
+
+Donnee maxPouls(Donnee* liste, int taille)
+{
+	Donnee minActuel;
+	minActuel.pouls = liste[0].pouls;
+	int i;
+	for (i = 0; i < taille; i++)
+	{
+		if (minActuel.pouls < liste[i].pouls)
+		{
+			minActuel = liste[i];
+		}
+	}
+	return minActuel;
+}

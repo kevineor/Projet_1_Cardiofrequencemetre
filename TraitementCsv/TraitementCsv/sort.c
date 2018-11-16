@@ -14,7 +14,7 @@ void fuse(Donnee *a,Donnee *tmp, int s0, int e0, int s1, int e1, int (cmp)(struc
 	}
 }
 
-void sort(int n, struct Donnee *a, int (cmp)(Donnee *, Donnee *)) {
+void sort(struct Donnee *a, int n, int (cmp)(Donnee *, Donnee *)) {
 	int p0, e0, e1, strd = 1;
 
 	Donnee *tmp, *tmp0, *orig = a;
@@ -72,8 +72,8 @@ Donnee* reverseList(Donnee *liste, int taille)
 	return reversed;
 }
 
-void sort_reverse(int n, struct Donnee *a, int (cmp)(Donnee *, Donnee *))
+void sort_reverse(struct Donnee *a, int n, int (cmp)(Donnee *, Donnee *))
 {
-	sort(n, a, cmp);
+	sort(a, n, cmp);
 	reverseList(a, n);
 }

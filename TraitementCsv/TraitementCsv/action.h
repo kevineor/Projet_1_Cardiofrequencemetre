@@ -11,3 +11,7 @@ int compare_by_pouls(Donnee * a, Donnee * b);
 int rechercherDate(Donnee * liste, int taille, int date);
 
 double moyenneIntervalle(Donnee * liste, int taille, int tempsA, int tempsB);
+
+Donnee minPouls(Donnee * liste, int taille);
+
+Donnee maxPouls(Donnee * liste, int taille);
