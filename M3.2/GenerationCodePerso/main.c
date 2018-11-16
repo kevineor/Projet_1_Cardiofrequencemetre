@@ -12,6 +12,6 @@ int main()
     system("pause"); //Une pause après le bonjour
     system("cls"); //On clear la sonsole pour seulement afficher le menu qui va suivre
     printf("Merci de saisir votre choix : ");
-    Menu(menu,sel,z); //On appelle la fonction "Menu" qui se chargera d'afficher le menu
+    Menu(menu,sel,z,Pouls); //On appelle la fonction "Menu" qui se chargera d'afficher le menu
     return 0;
 }
