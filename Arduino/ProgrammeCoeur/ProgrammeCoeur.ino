@@ -3,12 +3,12 @@
 #include "param.h"
 void setup() 
 {
-InitialisationLed(led);
+InitialisationLed(led); //On appelle la fonction qui se chargera d'initialiser les ports de l'Arduino avec les LEDs
 }
 void loop() {
-  int i=70; //i ici est le BPM
-  i=(i/60)*1000; //Ici on aura i en ms.
-  switch(z)
+  float i=70; //i ici est le BPM à récupérer
+  i=(60.0/(float)i)*1000.0;; //Ici on aura i en ms.
+  switch(z) //On fait un switch en fonction de la valeur de z dans param.h
   {
  case 1:
  // toutes les LED en même temps
@@ -73,7 +73,7 @@ ChenilleB(i,led);
 break;
 
 case 13:
-//Le monde simulateur
-Simulateur(Pouls);
+//Le monde simulateur pouls
+Simulateur(Pouls,led);
   }
 }

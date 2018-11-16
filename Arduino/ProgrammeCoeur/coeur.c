@@ -1,15 +1,17 @@
 #include "coeur.h"
 #include <arduino.h>
+
 void InitialisationLed(int* led)
 {
-  int pin = 2;
+  int pin = 2;//On int pin=2 car on va utiliser les sorties 2 à 11 de l'Arduino
   for(int i = 0; i < 10; i++)
   {
-    led[i] = pin;
+    led[i] = pin; //On répertoriera les LED dans un tableau qu'on appellera led[t]
     pinMode(led[i], OUTPUT);
     pin++;
   }
 }
+
 void AllLed(int i,int led[10])
 {
  for(int t=0;t<10;t++)
@@ -23,6 +25,7 @@ void AllLed(int i,int led[10])
   }
   delay(100);
 }
+
 void TwoLed(int i,int led[10])
 {
  for(int t=0;t<10;t+=2)
@@ -44,6 +47,7 @@ void TwoLed(int i,int led[10])
   digitalWrite(led[t],LOW);
  }
 }
+
 void ThreeLed(int i,int led[10])
 { for(int t=0;t<10;t+=3)
  {
@@ -73,6 +77,7 @@ void ThreeLed(int i,int led[10])
   digitalWrite(led[t],LOW);
  }  //On mettra la fréquence cardiaque
 }
+
 void FourLed(int i,int led[10])
 {
  for(int t=0;t<10;t+=4)
@@ -131,6 +136,7 @@ void FourLed(int i,int led[10])
   digitalWrite(led[t],LOW);
  }
 }
+
 void FiveLed(int i,int led[10])
 {
   for(int t=0;t<10;t+=5)
@@ -179,6 +185,7 @@ void FiveLed(int i,int led[10])
   digitalWrite(led[t],LOW);
  }
 }
+
 void SixLed(int i,int* led)
 {
   for(int t=0;t<10;t+=6)
@@ -406,11 +413,13 @@ for(int t=1;t<10;t+=9)
 
 void OnlyLed(int i,int led[10],int sel)
 {
-digitalWrite(led[sel],HIGH); //Essayer de remplacer "0" par une valeur utilisateur
+digitalWrite(led[sel],HIGH); //sel présent dans param.h, qui sera donc la valeur utilisateur
 delay(i);//On mettra la fréquence cardiaque
 digitalWrite(led[sel],LOW);
 delay(100);
 }
+
+
 void Chenille(int i,int led[10])
 {
   digitalWrite(led[1],HIGH);
@@ -426,6 +435,8 @@ void Chenille(int i,int led[10])
    delay(i);
    digitalWrite(led[9], LOW);
 }
+
+
 void ChenilleB(int i,int*led)
 {
   int t=0;
@@ -446,7 +457,9 @@ void ChenilleB(int i,int*led)
     digitalWrite(led[0],LOW);
     delay(i);
 }
-void Simulateur(int Pouls)
+
+
+void Simulateur(int Pouls,int*led)
 {
   float z=0;
   z=(60.0/(float)Pouls)*1000.0;
