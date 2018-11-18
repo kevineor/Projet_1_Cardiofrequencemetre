@@ -107,7 +107,7 @@ Donnee* convertirEnTableau(ListeChainee* listeChainee)
 	{
 		listeChainee = listeChainee->suivant;
 		tailleListe++;
-	} 
+	}
 	listeChainee = temp;
 	tableau = malloc(tailleListe * sizeof(Donnee));
 	int i;
