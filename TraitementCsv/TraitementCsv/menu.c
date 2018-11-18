@@ -146,4 +146,8 @@ void menu(void)
 			break;
 		}
 	} while (choix != 7);
+
+	//liberation de l'allocation de memoire
+	free(listeDonnee);
+	free(listeTemp);
 }
