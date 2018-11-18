@@ -23,6 +23,8 @@ void menu(void)
 	int choixRecherche;
 	int dateTrouvee;
 	int plageMin, plageMax;
+
+	//cette variable nous sert de variable temporaire permettant de vider le buffet de lecture stdin
 	char c;
 	do
 	{
@@ -37,9 +39,11 @@ void menu(void)
 
 		switch (choix)
 		{
+			//CAS CHOIX 1
 		case 1:
 			afficherListeDonnees(listeDonnee, taille);
 			break;
+			//CAS CHOIX 2
 		case 2:
 			fprintf(stdout, "\n\n	Choix 1 : Tri par date croissant\n");
 			fprintf(stdout, "	Choix 2 : Tri par date decroissant\n");
@@ -74,6 +78,8 @@ void menu(void)
 				break;
 			}
 			break;
+			
+			//CAS CHOIX 3
 		case 3:
 			fprintf(stdout, "\nA quelle date cherchez vous la frequence ?\n");
 
@@ -94,6 +100,8 @@ void menu(void)
 				fprintf(stdout, "Date non trouvée\n");
 			}
 			break;
+
+			//CAS CHOIX 4
 		case 4:
 			fprintf(stdout, "\nEntrez la plage min :\n");
 			while (scanf("%d", &plageMin) < 1)
@@ -111,9 +119,13 @@ void menu(void)
 			}
 			fprintf(stdout, "Moyenne : %lf\n", moyenneIntervalle(listeDonnee, taille, plageMin, plageMax));
 			break;
+
+			//CAS CHOIX 5
 		case 5:
 			fprintf(stdout, "Nombre de donnees contenues dans le fichier : %d\n", taille);
 			break;
+
+			//CAS CHOIX 6
 		case 6:
 			fprintf(stdout, "\n\n	Choix 1 : Recherche minimum pouls\n");
 			fprintf(stdout, "	Choix 2 : Recherche maximum pouls\n");
@@ -138,11 +150,16 @@ void menu(void)
 				break;
 			}
 			break;
+
+			//CAS CHOIX QUITER
 		case 7:
 			//Choix correspondant a quitter, le while va sortir de sa boucle tout seul
 			break;
+			
+			//CAS CHOIX INCONNU
 		default:
 			fprintf(stdout, "Erreur : choix ne correspondant a rien, veuillez reessayer\n");
+			//Le cas default ne nous fait pas sortir de la boucle, l'utilisateur va pouvoir reesayer
 			break;
 		}
 	} while (choix != 7);
