@@ -162,6 +162,7 @@ void menu(void)
 			//Le cas default ne nous fait pas sortir de la boucle, l'utilisateur va pouvoir reesayer
 			break;
 		}
+		fprintf(stdout, "\n\n");
 	} while (choix != 7);
 
 	//liberation de l'allocation de memoire

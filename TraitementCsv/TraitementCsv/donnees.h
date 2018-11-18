@@ -12,7 +12,7 @@ typedef struct Lchaine
 	struct Lchaine *suivant;
 }ListeChainee;
 
-ListeChainee* ajouterDonnee(ListeChainee* liste, Donnee donnee);
+static ListeChainee* ajouterDonnee(ListeChainee* liste, Donnee donnee);
 
 Donnee* lireCsv(char * chemin, int *taille);
 
@@ -22,7 +22,7 @@ static void affierListeChaineeDonnees(ListeChainee * liste);
 
 void afficherListeDonnees(Donnee * liste, int taille);
 
-void supprimerListeChainee(ListeChainee * liste);
+static void supprimerListeChainee(ListeChainee * liste);
 
 static Donnee * convertirEnTableau(ListeChainee * listeChainee);
 
