@@ -12,7 +12,7 @@ void afficherMenu(void)
 	fprintf(stdout, "Choix 7 : Quitter le programme\n");
 }
 
-void choixMenu(void)
+void menu(void)
 {
 	int taille;
 	Donnee* listeDonnee = lireCsv("../../FichierTestCSV.csv", &taille);

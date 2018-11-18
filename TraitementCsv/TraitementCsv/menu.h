@@ -5,4 +5,4 @@
 
 void afficherMenu(void);
 
-void choixMenu(void);
+void menu(void);
