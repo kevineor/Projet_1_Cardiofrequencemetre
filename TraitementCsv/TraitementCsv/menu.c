@@ -15,7 +15,8 @@ void afficherMenu(void)
 void menu(void)
 {
 	int taille;
-	Donnee* listeDonnee = lireCsv("../../FichierTestCSV.csv", &taille);
+	fprintf(stdout, "Lecture des donnees...\n");
+	Donnee* listeDonnee = lireCsv("../../TestGrandNombreValeurs.csv", &taille);
 	//Nous copions le tableau pour en avoir un temporaire que l'on peut trier
 	Donnee* listeTemp = copierTableau(listeDonnee, taille);
 	int choix;
