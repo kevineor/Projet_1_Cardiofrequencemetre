@@ -6,7 +6,7 @@ void setup()
 InitialisationLed(led); //On appelle la fonction qui se chargera d'initialiser les ports de l'Arduino avec les LEDs
 }
 void loop() {
-  float i=70; //i ici est le BPM à récupérer
+  float i=95; //i ici est le BPM à récupérer
   i=(60.0/(float)i)*1000.0;; //Ici on aura i en ms.
   switch(z) //On fait un switch en fonction de la valeur de z dans param.h
   {
